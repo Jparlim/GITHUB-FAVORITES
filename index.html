@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>GITHUB-FAVORITES</title>
+</head>
+<body>
+
+    <div class="app">
+        <header>
+            <h1>GITHUB FAVORITES</h1>
+            <div class="search">
+                <input type="text" placeholder="usuário do github">
+                <button>&plus;</button>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Repositories</th>
+                    <th>Followers</th>
+                     <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="user">
+                        <img src="https://github.com/maykbrito.png" alt="">
+                        <a href="https://github.com/maykbrito">
+                            <p>mayk brito</p>
+                            <span>maykbrito</span>
+                        </a>
+                    </td>
+                    <td class="repositories">
+                         76
+                    </td>
+                    <td class="followers">
+                        9589
+                    </td>
+                    <td class="buttonX">
+                        &times;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="user">
+                        <img src="https://github.com/diego3g.png" alt="">
+                        <a href="https://github.com/diego3g">
+                            <p>diego fernandes</p>
+                            <span>diego3g</span>
+                        </a>
+                    </td>
+                    <td class="repositories">
+                        48
+                    </td>
+                    <td class="followers">
+                        22503
+                    </td>
+                    <td class="buttonX" onclick="close()">
+                        &times;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <script src="js/index.js" type="module"></script>
+
+</body>
+</html>

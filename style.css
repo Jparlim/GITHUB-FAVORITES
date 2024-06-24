@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-poppins: 'poppins', sans-serif;
+    --text-color: #303030;
+}
+
+body {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+body * {
+    font-family: var(--ff-poppins);
+}
+
+.app {
+    width: 500px;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    height: 3.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    padding: 0 .8rem;
+
+    cursor: pointer;
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: rgb(93, 218, 240);
+    height: 3.2rem;
+    padding: 1rem;
+    border-radius: 0 4px 4px 0;
+
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color:  rgb(29, 206, 238);
+}
+
+/*tabela*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    margin: 2.5rem 0;
+    box-shadow: 0 1rem 2rem -1rem rgb(0, 0, 0, 0.3);
+}
+
+table * {
+    font-family: var(--ff-poppins);
+    color: #303030;
+}
+
+table th {
+    padding: 1.5rem;
+    background-color: rgb(93, 218, 240);
+
+    text-align: left;
+    font-weight: normal;
+}
+
+table th:first-child {
+    border-top-left-radius: .7rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .7rem;
+}
+
+
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+a p {
+    font-weight: bold;
+}
+
+td.buttonX {
+    color: red;
+}
+
+.user img {
+    width: 6rem;
+    height: 6rem;
+
+    border-radius: 50%;
+}
