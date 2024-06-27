@@ -129,8 +129,9 @@ a p {
     font-weight: bold;
 }
 
-td.buttonX {
+.buttonX {
     color: red;
+    cursor: pointer;
 }
 
 .user img {
