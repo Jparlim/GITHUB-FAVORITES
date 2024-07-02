@@ -26,10 +26,17 @@ class favorites{
     async add(username) {
         //try = tente fazer esta função, se algo der errado vai no catch
         try {
+
+            const userexsit = this.users.find(entry => entry.login === username)
+
+            if(userexsit) {
+                throw new Error('usuário ja cadastrado!')
+            }    
+
             const user = await githubusers.search(username)
             if(user.login === undefined) {
                 //o new Error vai sempre procurar o catch
-                throw new Error('encontrei um erro!!')
+                throw new Error('usuário não encontrado!')
             }
 
             this.users = [user, ...this.users]
@@ -79,7 +86,9 @@ export class favoritesview extends favorites {
 
         this.users.forEach(user => {
             const row = this.creatrow()
+            
             row.querySelector('.user img').src = `https://github.com/${user.login}.png`
+            row.querySelector('.user a').href = `https://github.com/${user.login}`
             row.querySelector('.user p').textContent = user.name
             row.querySelector('.user span').textContent = user.login
             row.querySelector('.repositories').textContent = user.public_repos
